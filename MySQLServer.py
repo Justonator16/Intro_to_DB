@@ -8,11 +8,11 @@ try:
     )
 
     mycursor = mydb.cursor()
-
-    result = mycursor.execute("CREATE DATABASE IF NOT EXIST alx_book_store")
+    
+    result = mycursor.execute("CREATE DATABASE IF NOT EXIST alx_book_store ")
 
     print("Database 'alx_book_store' created successfully!")
 
-    
+    result.close()
 except:
     print("An error occured")
