@@ -12,11 +12,12 @@ CREATE TABLE Books(
   	author_id INT,
     price DOUBLE NOT NULL,
     publication_date DATE,
-  	FOREIGN KEY author_id REFERENCING Authors(author_id)
+  	FOREIGN KEY (author_id) REFERENCING Authors(author_id)
 );
 
 CREATE TABLE Customers(
-    customer_id AUTO_INCREMENT PRIMARY KEY,
+    customer_id INT,
+    PRIMARY KEY(customer_id),
     customer_name VARCHAR(215),
     email VARCHAR(215),
     address TEXT NOT NULL
@@ -25,7 +26,8 @@ CREATE TABLE Customers(
 CREATE TABLE Orders(
     order_id AUTO_INCREMENT PRIMARY KEY,
   	order_date DATE NOT NULL,
-    FOREIGN KEY customer_id REFERENCING Customers(customer_id)
+    customer_id INT,
+    FOREIGN KEY (customer_id) REFERENCING Customers(customer_id)
     
 );
 
