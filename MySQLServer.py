@@ -15,5 +15,7 @@ try:
     print("Database 'alx_book_store' created successfully!")
 
     mydb.close()
+except mysql.connector.Error as error:
+    print(e)
 except:
     print("An error occured")
