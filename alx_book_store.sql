@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTSalx_book_store;
+CREATE DATABASE IF NOT EXISTS alx_book_store ;
 
 CREATE TABLE Authors(
     author_id INT NOT NULL,
