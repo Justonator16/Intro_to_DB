@@ -4,7 +4,7 @@ try:
     mydb = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="QaZWSXEDCRFVTGB"
+        password="QaZWSXEDCRFVTGB2004%"
     )
 
     mycursor = mydb.cursor()
@@ -13,6 +13,6 @@ try:
 
     print("Database 'alx_book_store' created successfully!")
 
-    result.close()
+    mydb.close()
 except:
     print("An error occured")
