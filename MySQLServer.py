@@ -16,6 +16,6 @@ try:
 
     mydb.close()
 except mysql.connector.Error as error:
-    print(e)
+    print(error)
 except:
     print("An error occured")
